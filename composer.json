@@ -1,9 +1,9 @@
 {
-    "name": "renoki-games/:package_name",
-    "description": ":package_description",
-    "keywords": ["laravel", "php"],
+    "name": "renoki-games/php-steam-api",
+    "description": "PHP SDK implementation for Valve's Steam API.",
+    "keywords": ["laravel", "php", "steam", "valve", "sdk", "wrapper", "api"],
     "license": "Apache-2.0",
-    "homepage": "https://github.com/renoki-games/:package_name",
+    "homepage": "https://github.com/renoki-games/php-steam-api",
     "authors": [
         {
             "name": "Alex Renoki",
@@ -16,22 +16,20 @@
     },
     "autoload": {
         "psr-4": {
-            "RenokiGames\\:package_namespace\\": "src/"
+            "RenokiGames\\Steam\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "RenokiGames\\:package_namespace\\Test\\": "tests"
+            "RenokiGames\\Steam\\Test\\": "tests"
         }
     },
     "scripts": {
         "test": "vendor/bin/phpunit"
     },
     "require-dev": {
-        "laravel/legacy-factories": "^1.1",
         "mockery/mockery": "^1.4",
-        "orchestra/testbench": "^5.0|^6.0",
-        "orchestra/database": "^5.0|^6.0"
+        "orchestra/testbench": "^5.0|^6.0"
     },
     "config": {
         "sort-packages": true
@@ -40,7 +38,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "RenokiGames\\:package_namespace\\:package_service_provider"
+                "RenokiGames\\Steam\\SteamServiceProvider"
             ]
         }
     }
